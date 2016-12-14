@@ -50,11 +50,11 @@ var helpers = {
 				return results._id;
 			})
 	},
-	deleteSaved: function(title, data, url){
+	deleteSaved: function(title, date, url){
 		return axios.delete('/api/saved', {
 			params: {
 				'title': title,
-				'data': data,
+				'date': date,
 				'url': url,
 			}
 		})
