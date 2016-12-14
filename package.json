@@ -1,0 +1,31 @@
+{
+  "name": "nytreact",
+  "version": "1.0.0",
+  "description": "React-based rendition of the NYT Article Search",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tsg1204/nytreact.git"
+  },
+  "author": "Tatiana Grigorieva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tsg1204/nytreact/issues"
+  },
+  "homepage": "https://github.com/tsg1204/nytreact#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bundle": "^0.2.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0"
+  },
+  "keywords": [
+    "react",
+    "NYT"
+  ]
+}
