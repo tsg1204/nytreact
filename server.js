@@ -43,27 +43,27 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get('/all', function(req, res) {
+app.get('/api', function(req, res) {
 
-  Article.find({}, function(err, found) {
+  Article.find({}, function(err, doc) {
     if (err) {
       console.log(err);
     } else {
-      res.json(found);
+      res.json(doc);
     }
   })
 });
 
-app.post('/submit', function(req, res) {
+app.post('/api', function(req, res) {
 
   var content = new Article(req.body);
 
-  content.save(req.body, function(err, saved) {
+  content.save(req.body, function(err) {
       if (err) {
         console.log('Error saving to mongo ', err);
       } else {
-        console.log('Saved data', saved);
-        res.send(saved);
+        console.log('Data Saved!');
+        res.send("Data saved!");
       }
     })
 
