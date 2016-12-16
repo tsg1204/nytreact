@@ -9,17 +9,13 @@ var Search = require('./Search.js');
 var Main = React.createClass({
 	//every component has to have a render function
 	render: function(){
-		return (
-			//Main Bootstrap Search 
+		return ( 
 			<div className="container">
-
-				// Jumbotron for Title 
 				<div className="jumbotron" style="background-color: #20315A ; color: white;">
-					<h1 className="text-center"><strong><i class="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
-					<p className="lead text-center"> A React module to search for New York Times articles, save them and comment on them. </p>
+					<h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
+					<p className="lead text-center"> Articles of interest </p>
 				</div>
 
-				// Row for Searching New York Times 
 				<div className="row">
 					<div className="col-sm-12">
 					<br>	

@@ -40,7 +40,7 @@ var Main = React.createClass({
 					this.setState({
 						savedArticles: articleData.data
 					});
-					console.log("saved results", articleData.data);
+					console.log("Saved results", articleData.data);
 				}.bind(this))
 
 

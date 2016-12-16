@@ -46,7 +46,7 @@ var helpers = {
 		};
 		return axios.post('/api/saved', newArticle)
 			.then(function(results){
-				console.log("acios results ", results._id);
+				console.log("axios results ", results._id);
 				return results._id;
 			})
 	},

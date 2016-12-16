@@ -68,8 +68,6 @@ var Query = React.createClass({
 
 					  {/* Here we have our final submit button */}
 					  <button type="submit" className="btn btn-default" onClick={this.handleSubmit} id="runSearch"><i className="fa fa-search"></i> Search</button>
-  					  {/*<button type="button" className="btn btn-default" id="clearAll"><i className="fa fa-trash"></i> Clear Results</button>*/}
-
 					</form>
 				</div>
 			</div>
