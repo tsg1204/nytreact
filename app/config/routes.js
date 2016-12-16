@@ -35,7 +35,7 @@ module.exports = (
       <Route path="Search" component={Search} />
       <Route path="Saved" component={Saved} />
 
-        <IndexRoute component={Search} />
+        <IndexRoute component={Main} />
 
       </Route>
   </Router>
