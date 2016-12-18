@@ -38,38 +38,12 @@ db.once('open', function() {
   console.log('Mongoose connection successful.');
 });
 
-// Main "/" Route. This will redirect the user to our rendered React application
-app.get("/", function(req, res) {
-  res.sendFile(__dirname + "/public/index.html");
+// Main route -> send main page
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname, './public', 'index.html'))
 });
-
-app.get('/api', function(req, res) {
-
-  Article.find({}, function(err, doc) {
-    if (err) {
-      console.log(err);
-    } else {
-      res.json(doc);
-    }
-  })
-});
-
-app.post('/api', function(req, res) {
-
-  var content = new Article(req.body);
-
-  content.save(req.body, function(err) {
-      if (err) {
-        console.log('Error saving to mongo ', err);
-      } else {
-        console.log('Data Saved!');
-        res.send("Data saved!");
-      }
-    })
-
-});
-
-
+// mongoose logic goes here
+require("./controllers/api-routes.js")(app);
 
 
 app.listen(PORT, function() {

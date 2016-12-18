@@ -1,30 +1,33 @@
-//this is the main app component.. sets up the header and static content
-
-//include react & react-router
+// Include React 
 var React = require('react');
-var Search = require('./Search.js');
-// var Router = require('react-router');
 
-//create the main component - createClass is a function within React so you need React before createClass
+// Include React Components
+var Nav = require('./MainChildren/Nav');
+var Jumbotron = require('./MainChildren/Jumbotron');
+
+// Helper Function
+var helpers = require('../utils/helpers');
+
 var Main = React.createClass({
-	//every component has to have a render function
-	render: function(){
-		return ( 
-			<div className="container">
-				<div className="jumbotron" style="background-color: #20315A ; color: white;">
-					<h1 className="text-center"><strong><i className="fa fa-newspaper-o"></i> New York Times Search</strong></h1>
-					<p className="lead text-center"> Articles of interest </p>
-				</div>
 
-				<div className="row">
-					<div className="col-sm-12">
-					<br>	
-						{this.props.children}
-					</div>
+	// Here we render the function
+	render: function(){
+
+		return(
+			<div className="main-container">
+				<div className="container">
+
+					<Nav />
+					<Jumbotron />
+						
+					{/*This code will dump the correct Child Component*/}
+					{this.props.children}
+
 				</div>
 			</div>
 		)
 	}
 });
 
+// Export the component back for use in other files
 module.exports = Main;
